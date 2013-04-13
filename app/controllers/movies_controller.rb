@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
       else
 	@ratings_shown = params[:ratings]
       end
+    elsif params[:ratings] == nil and params[:commit] == nil
+	@ratings_shown = ['G', 'PG', 'PG-13', 'R']
     else
 	@ratings_shown = []
     end
